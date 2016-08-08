@@ -27,11 +27,12 @@ async.series([
     server(callback)
   }], function (err) {
   if (err) {
-    console.log('[APP] initialization failed', err);
+    console.log('[APP] initialization failed', err)
   } else {
-    console.log('[APP] initialized SUCCESSFULLY');
+    console.log('[APP] initialized SUCCESSFULLY')
   }
 })
+
   // mongoose.connect(uri, function (err) {
   // if (err) throw err;
   // console.log('Server MongoDB is running on port 27017, DB: selling');

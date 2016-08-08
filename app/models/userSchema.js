@@ -1,52 +1,52 @@
-var mongoose = require ("mongoose");
+var mongoose = require('mongoose')
 
-module.exports = new mongoose.Schema("User", {
-  name:{
+module.exports = new mongoose.Schema('User', {
+  name: {
     type: String,
-    required: true,
+    required: true
   },
-  email:{
+  email: {
     type: String,
     required: true,
     lowercase: true,
-    unique: true,
+    unique: true
   },
-  image:{
+  image: {
     type: String,
-    default: ""
+    default: ''
   },
-  creationDate:{
+  creationDate: {
     type: Date,
     default: Date.now,
     expires: 60 * 60 * 31
   },
-  lastConnection:{
+  lastConnection: {
     type: Date,
     default: Date.now,
     expires: 60 * 60 * 31
   },
-  geolocalization:{
-    xPosition:{
+  geolocalization: {
+    xPosition: {
       type: String,
       required: true
     },
-    yPosition:{
-      type: String
+    yPosition: {
+      type: String,
       required: true
     }
   },
-  reviews:{
-    user:{
+  reviews: {
+    user: {
       type: String,
       required: true
     },
-    review:{
+    review: {
       type: String,
       required: true
     },
-    calification:{
+    calification: {
       type: Number,
-      reque
+      required: true
     }
   }
-});
+})

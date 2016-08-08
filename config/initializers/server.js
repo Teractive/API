@@ -28,7 +28,7 @@ var start = function (cb) {
   })
 
   app.listen(config.get('NODE_PORT'))
-  console.log('Server is running on port: ' + config.get('NODE_PORT'))
+  console.log('NodeServer is running on port: ' + config.get('NODE_PORT'))
 
   if (cb) {
     return cb()
