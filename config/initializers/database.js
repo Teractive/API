@@ -10,6 +10,7 @@ module.exports = function (cb) {
   // More logic
 
   app.use(express.static(path.join(__dirname, 'public')))
+  mongoose.Promise = global.Promise
   mongoose.connect('mongodb://' + config.get('MONGO_IP') + ':' + config.get('MONGO_PORT') + '/' + config.get('MONGO_DB'), function (err) {
     if (err) {
       console.log('[APP] initialization failed', err)
